@@ -1,0 +1,580 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  background: #fff;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: 100%;
+  height: 70px;
+  padding: 0 5%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+}
+
+.logo-icon {
+  color: #b88e2f;
+  font-size: 27px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #b88e2f;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-icons svg {
+  width: 20px;
+  height: 20px;
+  color: #222;
+  stroke-width: 1.8;
+  cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+}
+
+.hero > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: absolute;
+
+  top: 50%;
+  right: 7%;
+
+  transform: translateY(-50%);
+
+  width: 430px;
+  padding: 45px;
+
+  background: #fff3e3;
+}
+
+.hero-small {
+  margin: 0 0 8px;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #333;
+}
+
+.hero-content h1 {
+  margin: 0 0 20px;
+
+  color: #b88e2f;
+  font-size: 42px;
+  line-height: 1.1;
+}
+
+.hero-description {
+  margin: 0 0 25px;
+
+  color: #555;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.hero-content button {
+  border: none;
+
+  background: #b88e2f;
+  color: white;
+
+  padding: 15px 35px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.hero-content button:hover {
+  background: #967322;
+}
+
+.browse-section {
+  padding: 70px 7%;
+  text-align: center;
+}
+
+.section-heading {
+  margin-bottom: 40px;
+}
+
+.section-heading h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.section-heading p {
+  color: #666;
+}
+
+.category-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.category-card img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.category-card h3 {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.products-section {
+  padding: 60px 7%;
+  text-align: center;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  text-align: left;
+}
+
+.product-card {
+  background: #f4f5f7;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-image {
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #e97171;
+  color: white;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.badge.new {
+  background: #2ec1ac;
+}
+
+.product-info {
+  padding: 18px;
+}
+
+.product-info h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.product-info p {
+  color: #898989;
+  margin-bottom: 10px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.price strong {
+  font-size: 18px;
+}
+
+.price span {
+  color: #999;
+  text-decoration: line-through;
+}
+
+.product-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(58, 58, 58, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.product-card:hover .product-overlay {
+  opacity: 1;
+}
+
+.product-overlay button {
+  border: none;
+  background: white;
+  color: #b88e2f;
+  padding: 15px 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.product-actions {
+  display: flex;
+  gap: 20px;
+  color: white;
+  margin-top: 20px;
+}
+
+.show-more {
+  margin-top: 40px;
+  padding: 15px 45px;
+  border: 1px solid #b88e2f;
+  background: white;
+  color: #b88e2f;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.show-more:hover {
+  background: #b88e2f;
+  color: white;
+}
+
+
+/* =========================
+   INSPIRATION
+========================= */
+
+.inspiration-section {
+  margin-top: 80px;
+  padding: 60px 7%;
+  background: #fcf8f3;
+
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 0.8fr;
+  gap: 25px;
+
+  align-items: center;
+}
+
+.inspiration-text h2 {
+  font-size: 38px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.inspiration-text p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.inspiration-text button {
+  border: none;
+  background: #b88e2f;
+  color: white;
+  padding: 15px 30px;
+  cursor: pointer;
+}
+
+.inspiration-main {
+  position: relative;
+}
+
+.inspiration-main img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.inspiration-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 20px 25px;
+}
+
+.inspiration-caption span {
+  font-size: 13px;
+  color: #666;
+}
+
+.inspiration-caption h3 {
+  margin-top: 8px;
+  font-size: 22px;
+}
+
+.inspiration-small img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-section {
+  padding: 80px 5%;
+  text-align: center;
+}
+
+.gallery-section .section-heading p {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #666;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  border-top: 1px solid #ddd;
+  padding: 60px 7% 20px;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  gap: 50px;
+
+  position: relative;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.footer-column h4 {
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: #333;
+}
+
+.footer-column a:hover {
+  color: #b88e2f;
+}
+
+.footer .brand h2 {
+  font-size: 25px;
+}
+
+.footer .brand p {
+  color: #999;
+  line-height: 1.7;
+}
+
+.subscribe {
+  display: flex;
+  gap: 10px;
+}
+
+.subscribe input {
+  border: none;
+  border-bottom: 1px solid #333;
+  padding: 10px 5px;
+  outline: none;
+  width: 180px;
+}
+
+.subscribe button {
+  border: none;
+  border-bottom: 1px solid #333;
+  background: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.copyright {
+  grid-column: 1 / -1;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  margin-top: 20px;
+  color: #777;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .inspiration-section {
+    grid-template-columns: 1fr;
+  }
+
+  .inspiration-small img {
+    height: 400px;
+  }
+
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    height: 650px;
+  }
+
+  .hero-content {
+    right: 20px;
+    left: 20px;
+    width: auto;
+  }
+
+  .category-container {
+    grid-template-columns: 1fr;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+  }
+
+  .subscribe {
+    flex-direction: column;
+  }
+}
