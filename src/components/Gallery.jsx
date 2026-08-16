@@ -7,10 +7,10 @@ function Gallery() {
       </div>
 
       <div className="gallery-grid">
-        <img src="/src/dining.jpg" alt="Furniture" />
-        <img src="/src/living.jpg" alt="Furniture" />
-        <img src="/src/bedroom.jpg" alt="Furniture" />
-        <img src="/src/product1.jpg" alt="Furniture" />
+        <img src="/dining.jpg" alt="Furniture" />
+        <img src="/living.jpg" alt="Furniture" />
+        <img src="/bedroom.jpg" alt="Furniture" />
+        <img src="/product1.jpg" alt="Furniture" />
        
       </div>
     </section>

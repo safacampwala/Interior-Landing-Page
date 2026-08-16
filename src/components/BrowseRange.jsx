@@ -1,15 +1,15 @@
 const categories = [
   {
     name: "Dining",
-    image: "/src/dining.jpg",
+    image: "/dining.jpg",
   },
   {
     name: "Living",
-    image: "/src/living.jpg",
+    image: "/living.jpg",
   },
   {
     name: "Bedroom",
-    image: "/src/bedroom.jpg",
+    image: "/bedroom.jpg",
   },
 ];
 

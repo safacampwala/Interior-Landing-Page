@@ -17,13 +17,13 @@ function Inspiration() {
       </div>
 
       <div className="inspiration-main">
-        <img src="/src/living.jpg" alt="Beautiful interior" />
+        <img src="/living.jpg" alt="Beautiful interior" />
 
        
       </div>
 
       <div className="inspiration-small">
-        <img src="/src/bedroom.jpg" alt="Bedroom interior" />
+        <img src="/bedroom.jpg" alt="Bedroom interior" />
       </div>
     </section>
   );
